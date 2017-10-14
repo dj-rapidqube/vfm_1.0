@@ -19,6 +19,8 @@ exports.readIndex = (params) => {
         })
 
         .then((readIndexArray) => {
+            if(readIndexArray)
+            readIndexArray
             console.log("data in IndexArray " + readIndexArray)
             return resolve({
                 status: 201,                

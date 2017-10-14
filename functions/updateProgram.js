@@ -8,7 +8,7 @@ var bcSdk = require('../invoke');
 var user = 'dhananjay.p';
 var affiliation = 'vfm';
 
-//exports is used here so that updateRequest can be exposed for router and blockchainSdk file.
+//exports is used here so that updateRequest can be exposed for router and invoke.js.
 exports.updateProgram = (programid, status, transactionString) =>
     new Promise((resolve, reject) => {
         
@@ -22,7 +22,7 @@ exports.updateProgram = (programid, status, transactionString) =>
         
         bcSdk.updateRequest({ user: user, createProgram: updateRequest })
 
-        .then(() => resolve({ "status": 200, "message": "request updated Successfully" }))
+        .then(() => resolve({ "status": 200, "message": "Program updated Successfully" }))
 
         .catch(err => {
 
